@@ -1,6 +1,6 @@
 import React from 'react';
 import { Trade } from '../types';
-import { TrendingUp, TrendingDown, Clock, User, DollarSign } from 'lucide-react';
+import { TrendingUp, TrendingDown, Clock, User } from 'lucide-react';
 
 interface TradeTableProps {
   trades: Trade[];
