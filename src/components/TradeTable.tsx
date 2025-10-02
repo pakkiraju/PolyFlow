@@ -25,6 +25,10 @@ export const TradeTable: React.FC<TradeTableProps> = ({ trades, loading }) => {
     return size.toLocaleString();
   };
 
+  const formatBetAmount = (amount: number) => {
+    return `$${amount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+  };
+
   if (loading && trades.length === 0) {
     return (
       <div className="flex items-center justify-center py-12">
@@ -66,7 +70,7 @@ export const TradeTable: React.FC<TradeTableProps> = ({ trades, loading }) => {
                 Price
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
-                Amount
+                Bet
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
                 To Win
@@ -137,7 +141,7 @@ export const TradeTable: React.FC<TradeTableProps> = ({ trades, loading }) => {
                   <span className="text-sm text-white">{formatPrice(trade.price)}</span>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  <span className="text-sm text-white">{formatPrice(trade.size * trade.price)}</span>
+                  <span className="text-sm text-white">{formatBetAmount(trade.size * trade.price)}</span>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   {trade.side === 'BUY' ? (

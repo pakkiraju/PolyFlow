@@ -67,7 +67,7 @@ The app provides real-time statistics based on the most recent 100 trades:
 ## 📦 Installation & Setup
 
 ### Prerequisites
-- Node.js 18+ and npm
+- Node.js 20+ and npm (required for Vite compatibility)
 - Git
 
 ### Quick Start
@@ -133,6 +133,7 @@ src/
 ├── App.tsx                # Main application component
 └── main.tsx               # React application entry point
 ├── netlify.toml           # Netlify deployment configuration
+├── vite.config.ts         # Vite build configuration
 ├── package.json           # Project dependencies and scripts
 ├── tailwind.config.js     # Tailwind CSS configuration
 ├── tsconfig.json          # TypeScript configuration
@@ -161,7 +162,10 @@ Potential improvements for future versions:
    - **Environment variables** for Rollup compatibility
 3. **Deploy!** Your app will be live in minutes
 
-The `netlify.toml` file includes special configuration to handle Rollup's native binary dependencies on Netlify's build environment.
+The `netlify.toml` file includes special configuration to handle:
+- Rollup's native binary dependencies on Netlify's build environment
+- Node.js version requirements (20+) for Vite compatibility
+- Proper build settings and SPA redirects
 
 ### Other Platforms
 

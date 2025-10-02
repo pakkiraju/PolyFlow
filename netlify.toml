@@ -5,10 +5,10 @@
 [build.environment]
   # Force Rollup to use JavaScript instead of native binaries
   ROLLUP_FORCE_JS = "true"
-  # Disable Rollup's native module loading
-  NODE_OPTIONS = "--no-deprecation"
-  # Specify Node.js version for consistency
-  NODE_VERSION = "18"
+  # Additional Rollup environment variables
+  ROLLUP_WATCH = "false"
+  # Specify Node.js version for Vite compatibility (requires 20+)
+  NODE_VERSION = "20"
 
 [[redirects]]
   from = "/*"
