@@ -2,7 +2,7 @@ import { useState, useMemo } from 'react';
 import { TradeTable } from './components/TradeTable';
 import { TradeStats } from './components/TradeStats';
 import { useTrades } from './hooks/useTrades';
-import { RefreshCw, TrendingUp, Play, Pause } from 'lucide-react';
+import { RefreshCw, TrendingUp, Play, Pause, Github, Twitter } from 'lucide-react';
 
 function App() {
   const [autoRefresh, setAutoRefresh] = useState(true);
@@ -143,6 +143,35 @@ function App() {
 
         <TradeTable trades={filteredTrades} loading={loading} />
       </div>
+
+      {/* Footer */}
+      <footer className="mt-12 py-6 border-t border-gray-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-center space-x-6">
+            <a
+              href="https://github.com/pakkiraju/PolyFlow"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
+            >
+              <Github className="h-5 w-5" />
+              <span>GitHub</span>
+            </a>
+            <a
+              href="https://x.com/traderprad"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
+            >
+              <Twitter className="h-5 w-5" />
+              <span>Twitter</span>
+            </a>
+          </div>
+          <div className="mt-4 text-center text-sm text-gray-500">
+            Built with ❤️ for the Polymarket community
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

@@ -145,7 +145,7 @@ export const TradeTable: React.FC<TradeTableProps> = ({ trades, loading }) => {
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   {trade.side === 'BUY' ? (
-                    <span className="text-sm text-green-600 font-medium">{formatPrice(trade.size)}</span>
+                    <span className="text-sm text-green-600 font-medium">{formatBetAmount(trade.size)}</span>
                   ) : (
                     <span className="text-sm text-gray-500">-</span>
                   )}
