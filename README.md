@@ -132,6 +132,12 @@ src/
 ├── types.ts               # TypeScript type definitions
 ├── App.tsx                # Main application component
 └── main.tsx               # React application entry point
+├── netlify.toml           # Netlify deployment configuration
+├── package.json           # Project dependencies and scripts
+├── tailwind.config.js     # Tailwind CSS configuration
+├── tsconfig.json          # TypeScript configuration
+├── postcss.config.js      # PostCSS configuration
+└── README.md              # Project documentation
 ```
 
 ## Future Enhancements
@@ -149,10 +155,13 @@ Potential improvements for future versions:
 ### Netlify (Recommended)
 
 1. **Connect your GitHub repository** to Netlify
-2. **Set build settings**:
+2. **The `netlify.toml` file is already configured** with the correct build settings:
    - **Build command**: `npm run build`
    - **Publish directory**: `dist`
+   - **Environment variables** for Rollup compatibility
 3. **Deploy!** Your app will be live in minutes
+
+The `netlify.toml` file includes special configuration to handle Rollup's native binary dependencies on Netlify's build environment.
 
 ### Other Platforms
 

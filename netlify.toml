@@ -1,0 +1,16 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  # Force Rollup to use JavaScript instead of native binaries
+  ROLLUP_FORCE_JS = "true"
+  # Disable Rollup's native module loading
+  NODE_OPTIONS = "--no-deprecation"
+  # Specify Node.js version for consistency
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
